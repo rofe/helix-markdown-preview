@@ -165,7 +165,7 @@ if (typeof window.HelixMarkdownPreview === 'undefined') {
       }
 
       /**
-       * Removes the preview window and resets the extension.
+       * Removes the preview window closes the popup and resets the extension.
        * @private
        */
       function removePopup() {
@@ -173,7 +173,7 @@ if (typeof window.HelixMarkdownPreview === 'undefined') {
           delete popup.init;
           popup.close();
         }
-        chrome.extension.getViews({ type: 'tab' }).forEach((v) => {
+        chrome.extension.getViews({ type: 'popup' }).forEach((v) => {
           v.close();
         });
         popup = null;
