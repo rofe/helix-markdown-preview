@@ -567,8 +567,7 @@ if (typeof window.HelixMarkdownPreview === 'undefined') {
       }
 
       /**
-       * Assembles the data from the current browser window and sends it
-       * to the receiver.
+       * Assembles the data from the current browser window and sends it to the receiver.
        * @private
        * @return {object} The data object:<ul>
        * <li>string markdown The markdown</li>
