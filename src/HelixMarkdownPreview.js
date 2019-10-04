@@ -173,7 +173,7 @@ if (typeof window.HelixMarkdownPreview === 'undefined') {
           delete popup.init;
           popup.close();
         }
-        chrome.extension.getViews({ type: 'popup' }).forEach((v) => {
+        chrome.tabs.remove({ type: 'tab' }).forEach((v) => {
           v.close();
         });
         popup = null;
